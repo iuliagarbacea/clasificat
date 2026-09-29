@@ -1,0 +1,9 @@
+# build artefacts (make-zip.js output, uploaded to Cloudflare Pages by hand until Git integration)
+*.zip
+# personal documents / screenshots with her SITUR data
+*.docx
+# demo videos (regenerable with build/demo-video.js, 26 MB)
+demo/*.webm
+node_modules/
+.DS_Store
+Thumbs.db

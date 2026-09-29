@@ -1,0 +1,34 @@
+# Clasificat (clasificat.ro)
+
+> Ghid și kit self-serve, în limba română, pentru certificatul de clasificare turistică (SITUR) la camere și apartamente închiriate în regim hotelier de persoane fizice, cel mult 7 camere, listate pe Booking sau Airbnb. Editor: Digital SAGE IT Consulting SRL, București. Conținut verificat la 23.09.2026 după Normele metodologice modificate prin Ordinul 948/2026.
+
+Fapte de bază, valabile la 23.09.2026:
+- Certificatul de clasificare este obligatoriu pentru orice cazare turistică, indiferent de numărul de camere (OG 58/1998). Fără el: amendă 40.000–50.000 lei (HG 1267/2010).
+- Ca persoană fizică poți clasifica doar „apartamente sau camere de închiriat în locuințe familiale”, cel mult 7 camere / 14 locuri în total, fără PFA sau SRL.
+- Certificatul este gratuit (0 lei taxă la minister), are valabilitate nelimitată și se cere online, în SITUR (se.situr.gov.ro), cu identitatea digitală ROeID.
+- Termen legal până la autorizația provizorie de funcționare: 30 de zile; în practică 1–3 luni. Cu autorizația provizorie poți primi turiști.
+- Depunerea în SITUR are 7 pași; cererea standardizată (Anexa 3¹) și fișa camerelor (Anexa 4) le generează SITUR la pasul 6 din datele tastate, se semnează olograf și se încarcă la pasul 7, fiecare act în slotul lui.
+- Acte comune: cererea și fișa semnate, copie CI, act de proprietate cu extras de carte funciară (cel mult 30 de zile), dovada construcției legale; la ipotecă, acordul creditorului ipotecar. La casă: declarație că nu există pereți comuni și asociație. La bloc: avizul asociației, acordul fiecărui vecin cu pereți comuni, declarația de enumerare a apartamentelor învecinate. La coproprietate: acordul coproprietarului și copia CI a lui.
+- Din 20.05.2026 (Reg. UE 2024/1028, OG 6/2026) anunțurile au nevoie de un număr de înregistrare (cod unic SITUR), emis doar pentru unități deja clasificate; generarea lui nu era disponibilă la 22.09.2026.
+- Fiscal 2026, cel mult 7 camere: impozit 10% pe venitul net forfetar (70% din brut), adică 7% efectiv; CASS peste 6 salarii minime venit net extra-salarial; TVA 21% pe comisionul platformei prin codul special de TVA; fără casă de marcat dacă încasările trec prin platformă.
+
+## Pagini libere (răspunsuri directe)
+
+- [Acte necesare regim hotelier, persoană fizică: lista completă](https://clasificat.ro/acte-necesare-regim-hotelier): ce depui la orice imobil, în plus la casă, în plus la apartament în bloc, de unde iei fiecare act, cât costă, greșelile care întorc dosarul.
+- [Cum obții certificatul de clasificare online](https://clasificat.ro/certificat-clasificare-online): pașii în SITUR cu ROeID, termenele legale și practice, vizita de verificare.
+- [Cât costă certificatul de clasificare](https://clasificat.ro/cat-costa-certificat-clasificare): 0 lei la minister, costurile reale pe acte și dotări, consultant 1.000–7.500 lei față de kit 299 lei.
+- [Regim hotelier fără certificat: ce riști](https://clasificat.ro/regim-hotelier-fara-certificat): amenda, obligațiile platformelor din 2026, DAC7, ce faci dacă închiriezi deja.
+- [Certificat de clasificare pentru Booking și Airbnb](https://clasificat.ro/certificat-clasificare-booking-airbnb): diferența certificat / cod unic SITUR, ce fac platformele, casa de marcat.
+- [Acord vecini pentru regim hotelier, model gratuit](https://clasificat.ro/acord-vecini): care vecini semnează, ce faci dacă unul refuză, generator PDF în browser.
+- [Impozit regim hotelier 2026, calculator](https://clasificat.ro/impozit-regim-hotelier): impozit, CASS, TVA pe comision, cât rămâne dintr-o rezervare.
+- [Ești eligibil? Ce tip de structură ai?](https://clasificat.ro/ghid/eligibilitate): limita de 7 camere, casă sau apartament, dovada construcției legale.
+- [Codul unic SITUR: stare](https://clasificat.ro/ghid/cod-unic-situr): stadiul generării codului cerut de platforme, actualizat la două săptămâni.
+
+## Produs
+
+- [Kitul Clasificat, 299 lei, plată unică](https://clasificat.ro/#pret): aplicație în browser care verifică fiecare cameră pe criteriile de 1, 2 și 3 stele (Anexa 10), generează declarațiile și acordurile din datele tale și dă foaia de completare SITUR (valorile de tastat la fiecare pas, fișierul de încărcat în fiecare slot); ghidul complet (7 pagini) și kitul fiscal. Vânzător: Digital SAGE IT Consulting SRL prin Lemon Squeezy (merchant of record). Nu depunem dosarul și nu oferim consultanță juridică sau fiscală.
+
+## Optional
+
+- [Ghidul, pagină cu pagină](https://clasificat.ro/ghid/): cuprinsul, cu paginile libere și cele din kit.
+- Contact, doar în scris: contact@digitalsage.ro

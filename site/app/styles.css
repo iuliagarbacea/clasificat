@@ -1,0 +1,138 @@
+@font-face { font-family: "Manrope"; font-style: normal; font-weight: 500 800; font-display: swap; src: url(/fonts/manrope-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Manrope"; font-style: normal; font-weight: 500 800; font-display: swap; src: url(/fonts/manrope-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+:root {
+  --bg: #f6f5f1; --panel: #fff; --ink: #1d1d1b; --muted: #6b6a66; --line: #dedcd5;
+  --accent: #1f5f4a; --accent-ink: #fff; --warn-bg: #fff4e0; --warn: #8a5300;
+  --err-bg: #fde8e6; --err: #9b2a20; --ok-bg: #e6f3ec; --ok: #1f5f4a;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font: 500 16px/1.5 "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--panel); flex-wrap: wrap; }
+.brand { font-weight: 800; font-size: 17px; }
+.top-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.link { background: none; border: 0; color: var(--accent); cursor: pointer; padding: 0; font: inherit; text-decoration: underline; }
+.link.danger { color: var(--err); }
+.steps { display: flex; gap: 6px; padding: 12px 16px; overflow-x: auto; }
+.steps button { flex: 0 0 auto; border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 6px 12px; font: inherit; font-size: 14px; cursor: pointer; color: var(--muted); }
+.steps button.active { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.steps button.done { color: var(--ink); }
+.panel { max-width: 860px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 24px; font-weight: 800; letter-spacing: -.015em; margin: 8px 0 4px; }
+h2 { font-size: 18px; font-weight: 800; margin: 20px 0 8px; }
+p.lead { color: var(--muted); margin-top: 0; }
+fieldset { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin: 0 0 14px; background: var(--panel); }
+legend { padding: 0 6px; font-weight: 600; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px 14px; }
+label.f { display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+label.f span.hint { color: var(--muted); font-size: 12px; }
+input[type=text], input[type=number], input[type=email], input[type=tel], select, textarea { font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: #fff; width: 100%; }
+input.invalid { border-color: var(--err); }
+textarea { min-height: 70px; }
+.radios { display: flex; flex-direction: column; gap: 6px; }
+.radios label { display: flex; gap: 8px; align-items: flex-start; }
+.radios input { margin-top: 5px; }
+.actions { display: flex; justify-content: space-between; gap: 10px; margin: 18px 0; flex-wrap: wrap; }
+button.primary { background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 8px; padding: 10px 18px; font: inherit; font-weight: 600; cursor: pointer; }
+button.secondary { background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 10px 18px; font: inherit; cursor: pointer; }
+button.small { padding: 6px 10px; font-size: 14px; }
+.note { border-radius: 8px; padding: 10px 12px; margin: 10px 0; font-size: 15px; }
+.note.warn { background: var(--warn-bg); color: var(--warn); }
+.note.err { background: var(--err-bg); color: var(--err); }
+.note.ok { background: var(--ok-bg); color: var(--ok); }
+.note.stop { background: var(--err-bg); color: var(--err); font-weight: 600; }
+table.rooms { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.rooms th, table.rooms td { border-bottom: 1px solid var(--line); padding: 6px 4px; text-align: left; vertical-align: middle; }
+table.rooms input, table.rooms select { padding: 6px; }
+table.rooms td.num { width: 60px; }
+.cat-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+.cat { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; background: var(--panel); }
+.cat.pass { border-color: var(--ok); }
+.cat.fail { opacity: .8; }
+.cat h3 { margin: 0 0 6px; font-size: 16px; }
+.cat ul { margin: 0; padding-left: 18px; font-size: 13px; color: var(--muted); }
+.check { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; font-size: 15px; }
+.check input { margin-top: 5px; }
+.neighbour { border: 1px dashed var(--line); border-radius: 8px; padding: 10px; margin-bottom: 10px; }
+.doclist { list-style: none; padding: 0; margin: 0; }
+.doclist li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.doclist li .t { font-weight: 600; }
+.doclist li .d { color: var(--muted); font-size: 13px; }
+.foot { text-align: center; color: var(--muted); padding: 20px 16px; }
+
+/* Documents (screen preview + print) */
+.docs { max-width: 860px; margin: 0 auto; padding: 16px; }
+.doc { background: #fff; border: 1px solid var(--line); padding: 28px 36px; margin: 0 0 24px; font: 12.5pt/1.45 "Times New Roman", Times, serif; color: #000; }
+.doc h1 { font-size: 14pt; text-align: center; margin: 0 0 4px; font-weight: bold; }
+.doc .sub { text-align: center; margin: 0 0 14px; }
+.doc .right { text-align: right; }
+.doc p { margin: 0 0 8px; text-align: justify; }
+.doc ol, .doc ul { margin: 0 0 8px; }
+.doc .small { font-size: 10pt; }
+.doc table { width: 100%; border-collapse: collapse; margin: 6px 0 10px; font-size: 11pt; }
+.doc table th, .doc table td { border: 1px solid #000; padding: 3px 5px; vertical-align: middle; }
+.doc table th { font-weight: normal; text-align: center; }
+.doc .sig { display: flex; justify-content: space-between; margin-top: 26px; }
+.doc .sig div { min-width: 40%; }
+.doc-tools { display: flex; justify-content: space-between; margin: 0 0 8px; }
+.doc .field { display: inline; border-bottom: 1px dotted #000; padding: 0 4px; }
+.doc .cb { font-family: "Segoe UI Symbol", "DejaVu Sans", sans-serif; }
+
+@media print {
+  body { background: #fff; }
+  .top, .steps, .panel, .foot, .doc-tools { display: none !important; }
+  .docs { display: block !important; padding: 0; max-width: none; }
+  .doc { border: 0; margin: 0; padding: 0; page-break-after: always; }
+  body[data-print] .doc { display: none; }
+  body[data-print] .doc.printing { display: block; }
+  @page { size: A4; margin: 20mm 18mm; }
+}
+@media (max-width: 600px) {
+  .doc { padding: 16px; overflow-x: auto; font-size: 11pt; }
+  .doc table { font-size: 10pt; }
+  .doc .sig { flex-direction: column; gap: 14px; }
+  /* camerele devin carduri: un rând = un card cu etichete din data-l */
+  table.rooms:not(.situr) { display: block; }
+  table.rooms:not(.situr) tr:first-child { display: none; }
+  table.rooms:not(.situr) tr { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 10px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  table.rooms:not(.situr) td { display: block; border: 0; padding: 0; width: auto; }
+  table.rooms:not(.situr) td::before { content: attr(data-l); display: block; font-size: 11.5px; color: var(--muted); margin-bottom: 2px; }
+  table.rooms:not(.situr) td input, table.rooms:not(.situr) td select { width: 100%; box-sizing: border-box; }
+  table.rooms:not(.situr) td.act { grid-column: 1 / -1; text-align: right; }
+  table.rooms:not(.situr) td.act::before { content: none; }
+  /* previzualizarea SITUR și tabelele late derulează în interiorul cutiei, nu pagina */
+  fieldset { min-width: 0; } /* altfel fieldset-ul nu se îngustează sub conținut și pagina derulează lateral */
+  .tscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tscroll table.rooms.situr { min-width: 560px; }
+  .docs { padding: 8px; }
+  .top { flex-wrap: wrap; gap: 6px; }
+  .top-actions { flex-wrap: wrap; }
+}
+fieldset.prefilled { background: var(--ok-bg); border-color: #cfe3d8; }
+.prefilled-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.prefilled-row span { font-weight: 700; color: var(--ok); }
+
+/* pașii: eticheta SITUR sub nume (24.09.2026) */
+.steps button small { display: block; font-size: 11px; font-weight: 400; color: var(--muted); margin-top: 1px; }
+/* previzualizarea rândurilor SITUR la pasul camere */
+table.rooms.situr td, table.rooms.situr th { font-size: 13px; }
+/* butoanele „copiază” din foaia de completare (doar pe ecran) */
+.doc .copy { font: 600 11px/1 system-ui, sans-serif; padding: 3px 8px; margin-left: 8px; border: 1px solid #bbb; border-radius: 6px; background: #f4f4f2; color: #333; cursor: pointer; vertical-align: middle; white-space: nowrap; }
+.doc .copy:hover { background: #e9e9e5; }
+.doc .copy.done { background: #dff3e3; border-color: #9ccfa9; }
+@media print { .doc .copy, .screen-only { display: none !important; } }
+/* pasul „Ce urmează” (24.09.2026) */
+.track { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.track.done > label b { text-decoration: line-through; color: var(--muted); }
+.track .grid label.f { max-width: 220px; }
+
+/* criterii pe stele: tab-uri */
+.ctabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 12px; }
+.ctab { border: 1.5px solid var(--line); background: var(--panel); border-radius: 12px; padding: 8px 14px; font: inherit; font-weight: 700; cursor: pointer; color: var(--muted); display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+.ctab small { font-weight: 500; font-size: 12px; }
+.ctab.active { border-color: var(--accent); color: var(--accent); background: var(--ok-bg); }
+.cat li.ok { color: var(--ok); } .cat li.miss { color: var(--warn); }
+/* facilități */
+.facil { margin: 6px 0 4px; } .facil-t { font-size: 13px; font-weight: 700; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; margin: 8px 0 2px; }
+.facil .grid { gap: 2px 14px; }
+/* salvează toate */
+.allbar { display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; margin: 14px 0 6px; padding: 12px 14px; background: var(--ok-bg); border-radius: 10px; }

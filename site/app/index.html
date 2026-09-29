@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clasificat — generatorul de dosar</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css?v=202609241651">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Clasificat</a> · dosar persoană fizică</div>
+  <div class="top-actions">
+    <button type="button" id="btn-export" class="link">Salvează copie (JSON)</button>
+    <label class="link">Încarcă copie <input type="file" id="file-import" accept="application/json" hidden></label>
+    <button type="button" id="btn-reset" class="link danger">Șterge tot</button>
+  </div>
+</header>
+
+<nav class="steps" id="steps"></nav>
+
+<main id="main" class="panel"></main>
+
+<footer class="foot">
+  <small>Datele rămân în browserul tău. Nu se trimit nicăieri. Versiune conținut: Anexa 10 / Ordin 948/2026 · flux SITUR 24.09.2026</small>
+</footer>
+
+<div id="docs" class="docs" hidden></div>
+
+<script src="/config.js?v=202609241651"></script>
+<script src="/gate.js?v=202609241651"></script>
+<script src="rules.js?v=202609241651"></script>
+<script src="templates.js?v=202609241651"></script>
+<script>
+  // Poarta: aplicația pornește doar cu o cheie validă (pe localhost: orice cheie care începe cu TEST-).
+  window.Gate.require().then(function (ok) { if (ok) loadApp(); });
+  document.addEventListener('gate:open', loadApp);
+  var loaded = false;
+  function loadApp() { if (loaded) return; loaded = true; var s = document.createElement('script'); s.src = 'app.js?v=202609241651'; document.body.appendChild(s); }
+</script>
+</body>
+</html>

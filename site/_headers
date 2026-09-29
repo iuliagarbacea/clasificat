@@ -1,0 +1,36 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.lemonsqueezy.com; img-src 'self' data:; frame-ancestors 'none'; base-uri 'self'
+/app/*
+  X-Robots-Tag: noindex
+/termeni.html
+  X-Robots-Tag: noindex
+/confidentialitate.html
+  X-Robots-Tag: noindex
+/termeni
+  X-Robots-Tag: noindex
+/confidentialitate
+  X-Robots-Tag: noindex
+/ghid/criterii-stele.html
+  X-Robots-Tag: noindex, nofollow
+/ghid/criterii-stele
+  X-Robots-Tag: noindex, nofollow
+/ghid/dosar-casa.html
+  X-Robots-Tag: noindex, nofollow
+/ghid/dosar-casa
+  X-Robots-Tag: noindex, nofollow
+/ghid/dosar-apartament.html
+  X-Robots-Tag: noindex, nofollow
+/ghid/dosar-apartament
+  X-Robots-Tag: noindex, nofollow
+/ghid/depunere-situr.html
+  X-Robots-Tag: noindex, nofollow
+/ghid/depunere-situr
+  X-Robots-Tag: noindex, nofollow
+/ghid/fiscal.html
+  X-Robots-Tag: noindex, nofollow
+/ghid/fiscal
+  X-Robots-Tag: noindex, nofollow
