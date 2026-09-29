@@ -141,7 +141,7 @@ de treapta 2.** Intră în zip v3.
 
 ## Versiuni pe CSS/JS (24.09.2026)
 Cloudflare Pages servește CSS/JS cu `max-age=14400`; după un upload, un vizitator poate vedea HTML nou cu CSS vechi (s-a întâmplat pe 24.09: widgetul de eligibilitate a apărut nestilizat). De aceea toate referințele au `?v=<timestamp>`, puse de `build/bump-assets.js`. **Ordinea de build, întotdeauna:**
-`node build/build-ghid.js && node build/build-seo.js && node build/bump-assets.js`, apoi zip din `site/`.
+`node build/build-ghid.js && node build/build-seo.js && node build/bump-assets.js`, apoi **`git add -A && git commit && git push`** — Cloudflare Pages (proiectul `clasificat-site`) publică automat din GitHub (din 29.09.2026). Zip-ul (`make-zip.js`) e doar rezervă.
 
 ## Legături între pagini (24.09.2026)
 Chei localStorage, toate pe clasificat.ro, nimic pe server: `hostkit.elig.v1` (verificarea de eligibilitate → aplicație), `hostkit.tool.v1` (acord vecini → aplicație), `hostkit.dosar.v1` (aplicația → acord vecini), `hostkit.calc.v1` (calculator → pagina fiscală). Dacă se schimbă structura dosarului, verifică `prefill`/`prefillTool` din `app/app.js` și scriptul din `acord-vecini.html`.
