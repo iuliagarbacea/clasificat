@@ -159,3 +159,8 @@ Chei localStorage, toate pe clasificat.ro, nimic pe server: `hostkit.elig.v1` (v
 - Rămân în LS (Iulia): descriptor de extras `CLASIFICAT.RO` (Settings → General), numele store-ului „Clasificat” în loc de
   numele SRL (apare pe checkout și în e-mail), o cumpărare în **test mode** ca să vedem e-mailul și cheia reală.
 - Test de plată real: după treapta 2, cu cardul ei, apoi refund din LS.
+- **Test mode are produsele lui (30.09, confirmat în docs LS).** Produs de test **1400036**, aceleași setări, publicat.
+  **Checkout de test:** `https://clasificat.lemonsqueezy.com/checkout/buy/bb770a77-3e29-42b1-ad22-d4d48808f34b`
+  (card 4242 4242 4242 4242, orice dată viitoare, orice CVC). Cheia de test are `meta.product_id = 1400036`, deci poarta de pe
+  clasificat.ro o refuză („Cheia aparține altui produs”) — normal; testul local se face cu `lsProductId` schimbat temporar.
+  Butonul de confirmare duce la clasificat.ro/app/?key=… → pe site-ul live cheia de test va fi refuzată cu același mesaj.
