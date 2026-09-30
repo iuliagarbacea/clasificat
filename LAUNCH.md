@@ -145,3 +145,17 @@ Cloudflare Pages servește CSS/JS cu `max-age=14400`; după un upload, un vizita
 
 ## Legături între pagini (24.09.2026)
 Chei localStorage, toate pe clasificat.ro, nimic pe server: `hostkit.elig.v1` (verificarea de eligibilitate → aplicație), `hostkit.tool.v1` (acord vecini → aplicație), `hostkit.dosar.v1` (aplicația → acord vecini), `hostkit.calc.v1` (calculator → pagina fiscală). Dacă se schimbă structura dosarului, verifică `prefill`/`prefillTool` din `app/app.js` și scriptul din `acord-vecini.html`.
+
+## 30.09.2026 — produsul Lemon Squeezy există (creat de co-founder din Chrome)
+- Store live (KYC trecut), valuta **RON** confirmată în formularul de preț. Produs **1399407 „Kit clasificare regim hotelier”**,
+  299 RON, single payment, categorie fiscală „Digital Goods or Services”, fără fișiere, **License keys ON** (lungime nelimitată,
+  1 activare), **ascuns de pe storefront** (clasificat.lemonsqueezy.com nu-l listează; se cumpără doar prin link).
+- **Checkout:** `https://clasificat.lemonsqueezy.com/checkout/buy/077c80e2-4aee-472c-a634-11655209500a` (verificat: 302 → coș).
+  **NU e în `config.js`** — cât `checkoutUrl` e gol, butoanele „Ia kitul” trimit e-mail (site.js). Se pune la treapta 2.
+- Modal de confirmare + e-mail de chitanță în română; butonul „Deschide kitul” → `clasificat.ro/app/?key=[license_key]`
+  (variabilă documentată de LS). `gate.js` citește `?key=`, o scoate din URL (replaceState), o validează și o salvează;
+  cheie invalidă → poarta apare precompletată cu mesajul API-ului. Testat local (TEST- și cheie inexistentă).
+- `config.js`: `lsProductId = 1399407` (poarta refuză chei ale altui produs).
+- Rămân în LS (Iulia): descriptor de extras `CLASIFICAT.RO` (Settings → General), numele store-ului „Clasificat” în loc de
+  numele SRL (apare pe checkout și în e-mail), o cumpărare în **test mode** ca să vedem e-mailul și cheia reală.
+- Test de plată real: după treapta 2, cu cardul ei, apoi refund din LS.

@@ -11,8 +11,10 @@ window.SITE = {
     address: '',
   },
   // Lemon Squeezy — se completează după crearea contului și a produsului
-  checkoutUrl: '',       // ex. https://STORE.lemonsqueezy.com/buy/xxxxxxxx-xxxx-....
-  lsProductId: '',       // ex. 123456 — dacă e gol, nu se verifică produsul, doar validitatea cheii
+  // Link de checkout (produs 1399407, publicat 30.09.2026). GOL până la lansare: cât e gol, butoanele
+  // „Ia kitul” trimit e-mail. La lansare: https://clasificat.lemonsqueezy.com/checkout/buy/077c80e2-4aee-472c-a634-11655209500a
+  checkoutUrl: '',
+  lsProductId: '1399407', // „Kit clasificare regim hotelier”, Lemon Squeezy, 30.09.2026
   gateDays: 30,          // la câte zile se re-verifică online cheia de licență
   contentVersion: 'Anexa 10 / Ordin 948/2026 · 22.09.2026',
 };

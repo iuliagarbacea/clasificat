@@ -30,7 +30,7 @@ window.Gate = (function () {
     }
   }
 
-  function overlay() {
+  function overlay(prefill, prefillMsg) {
     const c = cfg();
     const el = document.createElement('div');
     el.id = 'gate';
@@ -49,9 +49,9 @@ window.Gate = (function () {
       <div class="box">
         <h2>Acces cu cheia de licență</h2>
         <p>Cheia este în e-mailul de confirmare a plății. O introduci o singură dată pe acest browser.</p>
-        <input type="text" id="gate-key" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" autocomplete="off">
+        <input type="text" id="gate-key" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" autocomplete="off" value="${(prefill||"").replace(/"/g,"")}">
         <button type="button" id="gate-go">Deblochează</button>
-        <div class="msg" id="gate-msg"></div>
+        <div class="msg" id="gate-msg">${prefillMsg||""}</div>
         <div class="alt">Nu ai cheie? ${c.checkoutUrl ? `<a href="${c.checkoutUrl}">Cumpără kitul (${c.price || ''})</a>` : `<a href="/">Vezi pagina produsului</a>`} · Probleme? <a href="mailto:${c.email || ''}">${c.email || ''}</a></div>
       </div>`;
     document.body.appendChild(el);
@@ -67,7 +67,26 @@ window.Gate = (function () {
     document.getElementById('gate-key').addEventListener('keydown', e => { if (e.key === 'Enter') go(); });
   }
 
+  // Cheia poate veni în URL de pe butonul de confirmare Lemon Squeezy (/app/?key=[license_key]).
+  // O scoatem imediat din adresă (istoric, marcaje) și o validăm ca și cum ar fi fost tastată.
+  function keyFromUrl() {
+    try {
+      const u = new URL(location.href), k = (u.searchParams.get("key") || "").trim();
+      if (!k) return "";
+      u.searchParams.delete("key");
+      history.replaceState(null, "", u.pathname + (u.search || "") + u.hash);
+      return k;
+    } catch (e) { return ""; }
+  }
+
   async function require() {
+    const fromUrl = keyFromUrl();
+    if (fromUrl) {
+      const r = await validate(fromUrl);
+      if (r.ok) { store({ key: fromUrl, validatedAt: Date.now() }); return true; }
+      overlay(fromUrl, r.msg);
+      return false;
+    }
     const s = stored();
     if (fresh(s)) return true;
     if (s && s.key) {
