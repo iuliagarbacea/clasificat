@@ -171,3 +171,8 @@ Chei localStorage, toate pe clasificat.ro, nimic pe server: `hostkit.elig.v1` (v
 - **Contact store = hello@digitalsage.ro** (apare pe chitanțe/facturi). Nota din chitanță actualizată pe ambele produse (1399407, 1400036).
 - Numele store-ului era deja „Clasificat” (descriptorul de card urmează numele: `LEMSQZY* CLASIFICAT`). Adresa din termeni: neschimbată (decizia ei).
 - Test mode lăsat ON pentru a doua cumpărare de test, ca persoană fizică (fără firmă/CUI): de verificat total 299,00 și linia de TVA.
+- **A doua cumpărare de test (01.10, #4821112, ca persoană fizică, RO, fără CUI):** checkout 299,00; chitanță 298,98 (dus-întors prin USD);
+  butonul din chitanță a ajuns pe clasificat.ro/app cu cheia precompletată și mesajul „Cheia aparține altui produs” (corect: cheie de test).
+  **Semn de întrebare:** datele comenzii arată `tax_inclusive: true` dar `tax_status: non_taxable`, VAT 0,00 % pentru un consumator RO.
+  Nu știm dacă e doar test mode sau LS nu aplică TVA RO. Nu se mai testează; se întreabă suportul LS (draft în memoria co-founder) și
+  se verifică pe prima vânzare reală. Pentru cumpărător nu contează (plătește 299 oricum); contează doar netul ei (299 vs ~247).
