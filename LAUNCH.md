@@ -164,3 +164,10 @@ Chei localStorage, toate pe clasificat.ro, nimic pe server: `hostkit.elig.v1` (v
   (card 4242 4242 4242 4242, orice dată viitoare, orice CVC). Cheia de test are `meta.product_id = 1400036`, deci poarta de pe
   clasificat.ro o refuză („Cheia aparține altui produs”) — normal; testul local se face cu `lsProductId` schimbat temporar.
   Butonul de confirmare duce la clasificat.ro/app/?key=… → pe site-ul live cheia de test va fi refuzată cu același mesaj.
+
+## 01.10.2026 — setări LS (făcute de co-founder din Chrome, aprobate de Iulia)
+- **Tax-inclusive pricing ON** (Settings → General; setare comună live/test). Motiv: factura testului din 30.09 (cumpărat ca SRL)
+  avea TVA 0%; o persoană fizică ar fi plătit 299 + TVA pe deasupra. Acum 299 e preț final; net ≈ 247 lei înainte de comisionul LS.
+- **Contact store = hello@digitalsage.ro** (apare pe chitanțe/facturi). Nota din chitanță actualizată pe ambele produse (1399407, 1400036).
+- Numele store-ului era deja „Clasificat” (descriptorul de card urmează numele: `LEMSQZY* CLASIFICAT`). Adresa din termeni: neschimbată (decizia ei).
+- Test mode lăsat ON pentru a doua cumpărare de test, ca persoană fizică (fără firmă/CUI): de verificat total 299,00 și linia de TVA.
