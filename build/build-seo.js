@@ -11,7 +11,7 @@ const ORG = {
   '@type': 'Organization', '@id': SITE + '/#org',
   name: 'Clasificat', legalName: 'Digital SAGE IT Consulting SRL', url: SITE + '/',
   logo: { '@type': 'ImageObject', url: SITE + '/icon-512.png', width: 512, height: 512 },
-  email: 'contact@digitalsage.ro', areaServed: 'RO', knowsLanguage: 'ro',
+  email: 'hello@digitalsage.ro', areaServed: 'RO', knowsLanguage: 'ro',
 };
 
 // published = prima publicare; modified = ultima modificare de conținut (actualizează la fiecare schimbare reală).

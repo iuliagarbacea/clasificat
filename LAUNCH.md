@@ -23,7 +23,7 @@ lucru pe care îl face Iulia (conturi, bani, semnături), fie un lucru pe care �
       KYC-ul lor cere datele firmei și IBAN; durează 1–3 zile.
 - [ ] **Găzduire** — Cloudflare Pages (gratuit): proiect nou, upload direct din folderul `site/`
       (fără git) sau conectat la un repo. Domeniul se leagă din același panou. Alternativ Netlify.
-- [ ] **E-mail de suport** — contact@digitalsage.ro există? Dacă nu, alias în Google Workspace.
+- [ ] **E-mail de suport** — hello@digitalsage.ro există? Dacă nu, alias în Google Workspace.
 
 ## C. Ce fac eu după B
 - [ ] `config.js`: ~~domain~~ (pus), checkoutUrl, lsProductId, CUI/J/adresa sediului.

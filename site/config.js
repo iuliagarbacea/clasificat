@@ -2,7 +2,7 @@
 window.SITE = {
   name: 'Clasificat',                    // brand: clasificat.ro (cumpărat 22.09.2026)
   domain: 'https://clasificat.ro',       // domeniul final, fără slash la sfârșit
-  email: 'contact@digitalsage.ro',       // adresa de suport (doar scris)
+  email: 'hello@digitalsage.ro',       // adresa de suport (doar scris)
   price: '299 lei',
   company: {
     name: 'Digital SAGE IT Consulting SRL',

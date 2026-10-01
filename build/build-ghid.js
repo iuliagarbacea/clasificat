@@ -86,9 +86,9 @@ function page(p, body, all) {
 <link rel="icon" href="/icon-48.png" sizes="48x48" type="image/png">
 <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/styles.css?v=202609301045">
-<script src="/config.js?v=202609301045"></script>
-${p.free ? '' : '<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">\n<script src="/gate.js?v=202609301045"></script>'}
+<link rel="stylesheet" href="/styles.css?v=202610011106">
+<script src="/config.js?v=202610011106"></script>
+${p.free ? '' : '<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">\n<script src="/gate.js?v=202610011106"></script>'}
 </head>
 <body class="ghid${p.free ? '' : ' gated'}">
 <header class="top" data-nosnippet><a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26"> Clasificat</a><nav aria-label="Meniu">
@@ -118,9 +118,9 @@ ${p.faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${inline(a)}</p
   <nav class="foot-links" aria-label="Subsol"><b>Pe site</b><a href="/ghid/">Ghidul</a><a href="/app/">Aplicația</a><a href="/acord-vecini.html">Acord vecini, model</a><a href="/impozit-regim-hotelier.html">Calculator impozit</a><a href="/acte-necesare-regim-hotelier.html">Acte necesare</a></nav>
   <div class="foot-co"><b>Contact</b><span data-company></span><br><a data-mail href="#"></a></div>
 </div></footer>
-<script src="/site.js?v=202609301045"></script>
-${p.slug === 'fiscal' ? '<script src="/calc.js?v=202609301045"></script>' : ''}
-${p.slug === 'eligibilitate' ? '<script src="/elig.js?v=202609301045"></script>' : ''}
+<script src="/site.js?v=202610011106"></script>
+${p.slug === 'fiscal' ? '<script src="/calc.js?v=202610011106"></script>' : ''}
+${p.slug === 'eligibilitate' ? '<script src="/elig.js?v=202610011106"></script>' : ''}
 </body>
 </html>`;
 }
@@ -138,7 +138,7 @@ const idx = `<!DOCTYPE html>
 <link rel="icon" href="/icon-48.png" sizes="48x48" type="image/png">
 <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/styles.css?v=202609301045"><script src="/config.js?v=202609301045"></script></head>
+<link rel="stylesheet" href="/styles.css?v=202610011106"><script src="/config.js?v=202610011106"></script></head>
 <body class="ghid"><header class="top" data-nosnippet><a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26"> Clasificat</a><nav aria-label="Meniu">
   <a href="/ghid/" class="cur">Ghid</a>
   <a href="/app/">Aplicația</a>
@@ -155,6 +155,6 @@ const idx = `<!DOCTYPE html>
   <nav class="foot-links" aria-label="Subsol"><b>Pe site</b><a href="/ghid/">Ghidul</a><a href="/app/">Aplicația</a><a href="/acord-vecini.html">Acord vecini, model</a><a href="/impozit-regim-hotelier.html">Calculator impozit</a><a href="/acte-necesare-regim-hotelier.html">Acte necesare</a></nav>
   <div class="foot-co"><b>Contact</b><span data-company></span><br><a data-mail href="#"></a></div>
 </div></footer>
-<script src="/site.js?v=202609301045"></script></body></html>`;
+<script src="/site.js?v=202610011106"></script></body></html>`;
 fs.writeFileSync(path.join(OUT, 'index.html'), idx);
 console.log('ghid: ' + PAGES.length + ' pagini + index → ' + OUT);

@@ -8,7 +8,7 @@
 <link rel="icon" href="/icon-48.png" sizes="48x48" type="image/png">
 <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css?v=202609301045">
+<link rel="stylesheet" href="styles.css?v=202610011106">
 </head>
 <body>
 <header class="top">
@@ -30,16 +30,16 @@
 
 <div id="docs" class="docs" hidden></div>
 
-<script src="/config.js?v=202609301045"></script>
-<script src="/gate.js?v=202609301045"></script>
-<script src="rules.js?v=202609301045"></script>
-<script src="templates.js?v=202609301045"></script>
+<script src="/config.js?v=202610011106"></script>
+<script src="/gate.js?v=202610011106"></script>
+<script src="rules.js?v=202610011106"></script>
+<script src="templates.js?v=202610011106"></script>
 <script>
   // Poarta: aplicația pornește doar cu o cheie validă (pe localhost: orice cheie care începe cu TEST-).
   window.Gate.require().then(function (ok) { if (ok) loadApp(); });
   document.addEventListener('gate:open', loadApp);
   var loaded = false;
-  function loadApp() { if (loaded) return; loaded = true; var s = document.createElement('script'); s.src = 'app.js?v=202609301045'; document.body.appendChild(s); }
+  function loadApp() { if (loaded) return; loaded = true; var s = document.createElement('script'); s.src = 'app.js?v=202610011106'; document.body.appendChild(s); }
 </script>
 </body>
 </html>
